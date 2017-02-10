@@ -1,7 +1,7 @@
 {
-  "name": "thinkful-react-starter",
+  "name": "Gamesift",
   "version": "0.0.1",
-  "description": "A React template",
+  "description": "Gamesift is built on a React template",
   "main": "js/index.js",
   "scripts": {
     "start": "http-server -c-1 build",
@@ -35,11 +35,9 @@
     "build:assets": "run-s clean:assets mkdir:assets _build:assets",
     "_build:assets": "cpr assets build/assets",
     "watch:assets": "run-s build:assets _watch:assets",
-    "_watch:assets": "chokidar assets/**/* -c \"npm run build:assets\"",
-    "deploy": "npm run gh-pages",
-    "gh-pages": "gh-pages -d dist -b gh-pages"
+    "_watch:assets": "chokidar assets/**/* -c \"npm run build:assets\""
   },
-  "author": "Joe Turner <joe@oampo.co.uk>",
+  "author": "Daniel Varela",
   "license": "UNLICENSED",
   "devDependencies": {
     "babel-cli": "^6.11.4",
