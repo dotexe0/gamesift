@@ -36,9 +36,11 @@
     "_build:assets": "cpr assets build/assets",
     "watch:assets": "run-s build:assets _watch:assets",
     "_watch:assets": "chokidar assets/**/* -c \"npm run build:assets\"",
-  "author": "Daniel Varela <dotexe0@gmail.com>",
+    "deploy": "npm run gh-pages",
+    "gh-pages": "gh-pages -d dist -b gh-pages"
+  },
+  "author": "Joe Turner <joe@oampo.co.uk>",
   "license": "UNLICENSED",
-
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "babel-loader": "^6.2.4",
@@ -51,6 +53,7 @@
     "chokidar-cli": "^1.2.0",
     "cpr": "^2.0.0",
     "enzyme": "^2.4.1",
+    "gh-pages-deploy": "^0.4.2",
     "http-server": "^0.9.0",
     "mkdirp": "^0.5.1",
     "mocha": "^3.0.1",
@@ -60,7 +63,6 @@
     "sinon-chai": "^2.8.0",
     "webpack": "^1.13.1"
   },
-  
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.3.1",
