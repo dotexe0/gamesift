@@ -35,10 +35,10 @@
     "build:assets": "run-s clean:assets mkdir:assets _build:assets",
     "_build:assets": "cpr assets build/assets",
     "watch:assets": "run-s build:assets _watch:assets",
-    "_watch:assets": "chokidar assets/**/* -c \"npm run build:assets\""
-  },
-  "author": "Joe Turner <joe@oampo.co.uk>",
+    "_watch:assets": "chokidar assets/**/* -c \"npm run build:assets\"",
+  "author": "Daniel Varela <dotexe0@gmail.com>",
   "license": "UNLICENSED",
+
   "devDependencies": {
     "babel-cli": "^6.11.4",
     "babel-loader": "^6.2.4",
@@ -60,6 +60,7 @@
     "sinon-chai": "^2.8.0",
     "webpack": "^1.13.1"
   },
+  
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
     "react": "^15.3.1",
