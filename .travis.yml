@@ -1,0 +1,21 @@
+deploy:
+  provider: releases
+  skip_cleanup: true
+  on:
+    tags: true
+  after_success:
+if ! git rev-parse gh-pages >/dev/null 2>/dev/null
+then
+  git checkout --orphan gh-pages
+  git rm -rf .
+  git commit --allow-empty -m "Initialize empty gh-pages"
+  git checkout master
+fi
+rev=`git rev-parse --short HEAD`
+dir=`git config push.gh-pages.subtree || echo build`
+git add -f $dir
+tree=`git write-tree --prefix=$dir/`
+git reset HEAD $dir
+commit=`echo Update gh-pages from $dir $rev|git commit-tree $tree -p gh-pages`
+git update-ref refs/heads/gh-pages $commit
+git push origin gh-pages:gh-pages
