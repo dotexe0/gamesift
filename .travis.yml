@@ -1,6 +1,5 @@
 deploy:
   provider: releases
-  api_key: "e075d54e66b2ecb0d761af50c7b8117f5d0d83ee"
   skip_cleanup: true
   on:
     tags: true
