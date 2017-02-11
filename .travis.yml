@@ -1,7 +1,7 @@
+language: node_js
+node_js:
+  - "node"
 deploy:
-  language: node_js
-  node_js:
-    - "node"
   provider: releases
   api_key:
     secure: "MZ+oWGwBYQ+jyiRiOd0kcNlgigRuKczzbyBUNQj38dVMJN7iHkdhcm1MXRMwHzGqfKBHEixREJJNzOEt2iTjoiiv0OdjcXPVZtKEv80Ksiru6jdWoOZnkQis1c/ZH81Vu5PBtGCdfrkDukHLABOsvFQH3NS7QFUNt24JnDNs6zAXsMvKS6Q6M7paNXXFEZa1f9ZyQSf1nHIkm1YllCJfZqhyJA7mmMbc+8t3NpNuwXPQ8M1r7FD5QILfyxvXvr76QsLUPMz1OMwr/ia2CNQvHVKd4KfQ4oqCMkYiCrCIVFcpxtWa/TIq4z0xnDVP3QC0T7D7zDLoSC/FqKojx+6DZimVJpYJm1nnn/rScCneA7US+X71TO+cBl3a5ZZHCZIq4xDVwO0APtKg5ipqse33rHJlj3HcbOIjH3NIjOhMvozvIXeGgnG9BKTPzrO7ZEJWyaHTpf+awidRNZ+zqfBEDXclvGCCpgOfJZD9mMh0EQljDNUhzjndiayDLBKkdWkGzCXrXQOCNnZkADfr2akw3poNDnxgUqD2aJBDYzML4oHngr6SERA/WEWXqi2xoBDIIWPZ2nZSWTv6/NVPssqx8gPNF9kZN1ORxx1VbrTgoHcpzapx7zpzdmIPMDSeWs9tzLXiOPJmgQvQxVGGZthXgdKfF2eCxk0L/k6ym1Jjapw="
