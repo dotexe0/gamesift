@@ -8,7 +8,7 @@ deploy:
   skip_cleanup: true
   local_dir: build
   on:
-    tags
+    tags: true
 after_success:
   if ! git rev-parse gh-pages >/dev/null 2>/dev/null
   then
