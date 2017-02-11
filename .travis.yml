@@ -5,22 +5,23 @@ deploy:
   provider: releases
   api_key:
     secure: "MZ+oWGwBYQ+jyiRiOd0kcNlgigRuKczzbyBUNQj38dVMJN7iHkdhcm1MXRMwHzGqfKBHEixREJJNzOEt2iTjoiiv0OdjcXPVZtKEv80Ksiru6jdWoOZnkQis1c/ZH81Vu5PBtGCdfrkDukHLABOsvFQH3NS7QFUNt24JnDNs6zAXsMvKS6Q6M7paNXXFEZa1f9ZyQSf1nHIkm1YllCJfZqhyJA7mmMbc+8t3NpNuwXPQ8M1r7FD5QILfyxvXvr76QsLUPMz1OMwr/ia2CNQvHVKd4KfQ4oqCMkYiCrCIVFcpxtWa/TIq4z0xnDVP3QC0T7D7zDLoSC/FqKojx+6DZimVJpYJm1nnn/rScCneA7US+X71TO+cBl3a5ZZHCZIq4xDVwO0APtKg5ipqse33rHJlj3HcbOIjH3NIjOhMvozvIXeGgnG9BKTPzrO7ZEJWyaHTpf+awidRNZ+zqfBEDXclvGCCpgOfJZD9mMh0EQljDNUhzjndiayDLBKkdWkGzCXrXQOCNnZkADfr2akw3poNDnxgUqD2aJBDYzML4oHngr6SERA/WEWXqi2xoBDIIWPZ2nZSWTv6/NVPssqx8gPNF9kZN1ORxx1VbrTgoHcpzapx7zpzdmIPMDSeWs9tzLXiOPJmgQvQxVGGZthXgdKfF2eCxk0L/k6ym1Jjapw="
-  skip_cleanup: false
+  skip_cleanup: true
   local_dir: build
   on:
     tags
-after_success: |
-  if [ -n "$GITHUB_API_KEY" ]; then
-    cd "$TRAVIS_BUILD_DIR"
-    # This generates a `web` directory containing the website.
-    make web
-    cd web
-    git init
-    git checkout -b gh-pages
-    git add .
-    git -c user.name='travis' -c user.email='travis' commit -m init
-    # Make sure to make the output quiet, or else the API token will leak!
-    # This works because the API key can replace your password.
-    git push -f -q https://<me>:$GITHUB_API_KEY@github.com/<me>/<myrepo>-gh-pages gh-pages &2>/dev/null
-    cd "$TRAVIS_BUILD_DIR"
+after_success:
+  if ! git rev-parse gh-pages >/dev/null 2>/dev/null
+  then
+    git checkout --orphan gh-pages
+    git rm -rf .
+    git commit --allow-empty -m "Initialize empty gh-pages"
+    git checkout master
   fi
+  rev=`git rev-parse --short HEAD`
+  dir=`git config push.gh-pages.subtree || echo build`
+  git add -f $dir
+  tree=`git write-tree --prefix=$dir/`
+  git reset HEAD $dir
+  commit=`echo Update gh-pages from $dir $rev|git commit-tree $tree -p gh-pages`
+  git update-ref refs/heads/gh-pages $commit
+  git push origin gh-pages:gh-pages
