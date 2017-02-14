@@ -1,11 +1,23 @@
 import React from 'react';
+import SearchBar from './SearchBar';
 
-export default function App() {
-  const greeting = '!!!Hello World!';
+export default class App extends React.Component {
 
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
     return (
-        <div className="card">
-            {greeting}
+      <div>
+        <h1>
+          Games Appsss
+        </h1>
+        <SearchBar />
+        <div>
+          {this.props.games}
         </div>
+      </div>
     );
-}
+  };
+};
