@@ -6,6 +6,7 @@ export default class GameCard extends React.Component {
     super(props);
   }
   render() {
+    console.log("proops: ", this.props);
     return (
         <div>
           <img src={this.props.img} alt="error, no img found" />
@@ -13,7 +14,7 @@ export default class GameCard extends React.Component {
                 {this.props.title}
             </strong>
             &nbsp;
-            {this.props.videoId}
+            {this.props.videoId.name}
         </div>
     );
   };
