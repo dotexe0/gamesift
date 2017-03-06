@@ -11,7 +11,7 @@ export default class GameCardContainer extends React.Component {
     console.log("GameCardContainer", this.props);
     const game = GAMES[this.props.id];
     return (
-      <GameCard id={game.id} title={game.title} videoId={game.videoId} />
+      <GameCard img={game.img} id={game.id} title={game.title} videoId={game.videoId} />
     );
   }
 }

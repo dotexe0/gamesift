@@ -15,7 +15,7 @@ export default class App extends React.Component {
         </h1>
         <SearchBar />
         <div>
-          {this.props.games}
+          {this.props.children}
         </div>
       </div>
     );
