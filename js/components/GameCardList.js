@@ -11,10 +11,10 @@ export default class GameCardList extends React.Component {
   }
   render() {
 
-    // console.log("GameCardList props, ", this.state);
+    console.log("GameCardList props, ", this.state);
     const games = GAMES.map((gameId, index) => {
         const game = this.state.games[index];
-        // console.log("game: ", game.cover.cloudinary_id);
+        console.log("game: ", game);
         const imageUrl = `http://images.igdb.com/igdb/image/upload/w_500/${game.cover.cloudinary_id}.png`
         return (
             <li key={index}>
