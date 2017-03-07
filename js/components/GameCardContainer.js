@@ -7,7 +7,8 @@ export default class GameCardContainer extends React.Component {
     super(props);
   }
   render() {
-    console.log("GameCardContainer", this.props);
+    //props here is a single game object as well
+    // console.log("GameCardContainer", this.props);
     return (
       <GameCard img={this.props.img} id={this.props.id} title={this.props.title} videoId={this.props.videoId} />
     );
