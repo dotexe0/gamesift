@@ -4,16 +4,14 @@ import { connect } from 'react-redux';
 import GAMES from '../gamesDummyData';
 
 export class GameCardList extends React.Component {
-  constructor(props) {
-    super(props);
-    //props here contains Location, params, route, router, routeParams. Need to pass state.
-    console.log("GameCardList props, ", this.props);
-    this.state = {
+    state = {
       games: GAMES
     }
-  }
 
   render() {
+    //props here contains Location, params, route, router, routeParams. Need to pass state.
+    console.log("GameCardList props, ", this.props);
+    console.log("state: ", this.state);
 
     const games = GAMES.map((gameId, index) => {
         const game = this.state.games[index];
@@ -39,7 +37,6 @@ export class GameCardList extends React.Component {
 };
 
 const mapStateToProps = (state, props) => {
-  games: state.games
 }
 
 export default connect(mapStateToProps)(GameCardList);

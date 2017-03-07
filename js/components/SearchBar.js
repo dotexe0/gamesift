@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
-
+import { searchGame } from '../actions';
 import GameCardList from './GameCardList';
 
 export class SearchBar extends React.Component {
@@ -12,9 +12,7 @@ export class SearchBar extends React.Component {
   }
 
   Loading = () => { return <h5>Loading...</h5> }
-
-  NotLoading = () => { return;}
-
+  NotLoading = () => { return; }
   isLoading = () => {
     const loading = this.state.loading;
     if (loading) {
@@ -33,8 +31,9 @@ export class SearchBar extends React.Component {
 
     try {
       const { data } = await axios.get(url)
-      this.setState({games: data, loading: false})
-      console.log("Games: ", this.state.games);
+      this.props.dispatch(searchGame(data));
+      // this.setState({games: data, loading: false})
+      // console.log("Games: ", this.state.games);
     } catch (e) {
       console.log(e);
     }
