@@ -11,7 +11,7 @@ export default class App extends React.Component {
     return (
       <div>
         <h1>
-          Games Appsss
+          Gamesift
         </h1>
         <SearchBar />
         <div>

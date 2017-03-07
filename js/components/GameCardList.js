@@ -1,31 +1,22 @@
 import React from 'react';
 import GameCardContainer from './GameCardContainer';
 import { connect } from 'react-redux';
-import GAMES from '../gamesDummyData';
 
-export class GameCardList extends React.Component {
-    state = {
-      games: GAMES
-    }
+class GameCardList extends React.Component {
 
   render() {
     //props here contains Location, params, route, router, routeParams. Need to pass state.
     console.log("GameCardList props, ", this.props);
-    console.log("state: ", this.state);
 
-    const games = GAMES.map((gameId, index) => {
-        const game = this.state.games[index];
+    const games = this.props.games.map((game, index) => {
 
-        // a single game object
-        // console.log("game: ", game);
-
-        const imageUrl = `http://images.igdb.com/igdb/image/upload/w_320/${game.cover.cloudinary_id}.png`
-        return (
-            <li key={index}>
-               <GameCardContainer img={imageUrl} id={game.id} title={game.name}
-                        videoId={game.videos[0]} />
-            </li>
-        );
+      const imageUrl = `http://images.igdb.com/igdb/image/upload/w_320/${game.cover.cloudinary_id}.png` || 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
+      return (
+          <li key={index}>
+             <GameCardContainer img={imageUrl} id={game.id} title={game.name}
+                      videoId={game.videos[0]} />
+          </li>
+      );
     });
 
     return (
@@ -36,7 +27,8 @@ export class GameCardList extends React.Component {
   }
 };
 
-const mapStateToProps = (state, props) => {
-}
+const mapStateToProps = state => ({
+  games: state.games
+})
 
 export default connect(mapStateToProps)(GameCardList);

@@ -2,19 +2,17 @@ import React from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import { searchGame } from '../actions';
-import GameCardList from './GameCardList';
 
-export class SearchBar extends React.Component {
+class SearchBar extends React.Component {
   state = {
-    query: '',
-    loading: false,
-    games: []
+    query: ''
   }
 
+  // not working right now
   Loading = () => { return <h5>Loading...</h5> }
   NotLoading = () => { return; }
   isLoading = () => {
-    const loading = this.state.loading;
+    const loading = this.props.loading;
     if (loading) {
       return <Loading />
     } else {
@@ -24,19 +22,7 @@ export class SearchBar extends React.Component {
 
   onSearchAPI = async (event) => {
     event.preventDefault();
-    axios.defaults.headers.common['X-Mashape-Key'] = 'JX0iguNUhfmsh56hr9JJEnbaKl7lp1PEXWZjsnHgdC9cdmNOB2';
-
-    let url = `https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name%2Ccover%2Cvideos&width=320&height=568&limit=5&order=release_dates.date%3Adesc&search=${this.state.query}`;
-    this.setState({ loading: true});
-
-    try {
-      const { data } = await axios.get(url)
-      this.props.dispatch(searchGame(data));
-      // this.setState({games: data, loading: false})
-      // console.log("Games: ", this.state.games);
-    } catch (e) {
-      console.log(e);
-    }
+    this.props.searchGame(this.state.query)
   }
 
   _onChangeTerm = e => this.setState({ query: e.target.value })
@@ -56,8 +42,8 @@ export class SearchBar extends React.Component {
   }
 }
 
-const mapStateToProps = (state, props) => ({
-  games: state.games
+const mapStateToProps = state => ({
+  loading: state.loading
 });
 
-export default connect(mapStateToProps)(SearchBar);
+export default connect(mapStateToProps, { searchGame })(SearchBar);

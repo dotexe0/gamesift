@@ -1,9 +1,12 @@
 import {createStore, applyMiddleware, compose} from 'redux';
 import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+
 import reducer from './reducers';
 
 const middlewares = [
-  logger()
+  logger(),
+  thunk
 ]
 
 const enhancers = compose(
