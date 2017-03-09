@@ -15,7 +15,7 @@ const routes = (
     <Router history={browserHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={GameCardList} />
-        <Route path="/game/:gameID" component={GameDetails} />
+        <Route path="/games/:gameID" component={GameDetails} />
       </Route>
     </Router>
   </Provider>

@@ -1,15 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-export default class GameDetails extends React.Component {
+class GameDetails extends React.Component {
 
   render() {
     console.log("GameCard props: ", this.props);
     console.log("State: ", this.state);
+    const { title, id, img } = this.props;
+
     return (
-        <div className="gameCard">
-          {this.props.title}<br />
-        <img onClick={() => hashHistory.push(`/game/${this.props.id}`)} src={this.props.img} alt="error, no img found" /><br /><br />
+        <div className="gameDetails">
+        <button onClick={() => hashHistory.push("/games")}>Back</button>
+
+          {title}<br />
+
+          <img src={img} alt="error, no img found" /><br /><br />
           <a href={youtubeLink}>Trailer</a><br />
         </div>
     )

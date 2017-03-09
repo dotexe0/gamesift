@@ -16,7 +16,7 @@ class GameCardList extends React.Component {
       // console.log("videos?: ", video);
       return (
           <li key={index}>
-             <GameCardContainer img={imageUrl} id={game.id} title={game.name}
+             <GameCardContainer img={imageUrl} id={game.id} title={game.name}  summary={this.props.summary}
                       videoId={video} />
           </li>
       );
