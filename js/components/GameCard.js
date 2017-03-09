@@ -13,16 +13,19 @@ export default class GameCard extends React.Component {
     //props here is a single game object
     // console.log("GameCard props: ", this.props);
     // console.log("State: ", this.state);
-    const youtubeLink = `https://www.youtube.com/watch?v=${this.props.videoId}`;
-
+    const youtubeLink = `https://www.youtube.com/embed/${this.props.videoId}`;
+    const {title, img, id, summary} = this.props;
     return (
         <div className="gameCard">
-          {this.props.title}<br />
+          {title}<br />
+        <Link to={`/games/${id}`}>
           <img
-              onClick={() => hashHistory.push(`/games/${this.props.id}`)}
-              src={this.props.img}
+              onClick={() => hashHistory.push(`/games/${id}`)}
+              src={img}
               alt="error, no img found" /><br /><br />
+        </Link>
            <a href={youtubeLink}>Trailer</a><br />
+           <iframe width="560" height="315" src={youtubeLink} frameBorder="0" allowFullScreen></iframe>
         </div>
     );
   };

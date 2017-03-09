@@ -1,4 +1,4 @@
-import { SEARCH_GAME, RECEIVED_GAME } from '../actions';
+import { SEARCH_GAME, RECEIVED_GAME, SHOW_DETAIL } from '../actions';
 
 const initialState = {
   loading: false,
@@ -20,7 +20,14 @@ export default (state=initialState, action) => {
       games: action.games,
       loading: false
     }
-    
+
+    case SHOW_DETAIL:
+
+      return {
+        ...state,
+        game: state.games.filter(i => i.id.toString() === action.gameId)[0]
+      }
+
     default:
       return state;
   }

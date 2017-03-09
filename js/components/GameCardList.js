@@ -11,12 +11,12 @@ class GameCardList extends React.Component {
     const games = this.props.games.map((game, index) => {
       // console.log("img: ", game.cover.cloudinary_id);
       const imageUrl = `http://images.igdb.com/igdb/image/upload/w_320/${game.cover.cloudinary_id}.png` || 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
-      const video = game.videos[0].video_id ? game.videos[0].video_id : 'dQw4w9WgXcQ';
+      const video = game.videos ? game.videos[0].video_id : 'dQw4w9WgXcQ';
 
       // console.log("videos?: ", video);
       return (
           <li key={index}>
-             <GameCardContainer img={imageUrl} id={game.id} title={game.name}  summary={this.props.summary}
+             <GameCardContainer img={imageUrl} id={game.id} title={game.name}  summary={game.summary}
                       videoId={video} />
           </li>
       );

@@ -23,7 +23,7 @@ const receivedGame = games => ({
 });
 
 export const SHOW_DETAIL = 'SHOW_DETAIL';
-const showDetail = gameId => ({
+export const showDetail = gameId => ({
   type: SHOW_DETAIL,
   gameId
 })
