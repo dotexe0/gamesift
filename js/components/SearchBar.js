@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import { searchGame } from '../actions';
-
+import { browserHistory } from 'react-router';
 class SearchBar extends React.Component {
   state = {
     query: ''
@@ -23,6 +23,7 @@ class SearchBar extends React.Component {
   onSearchAPI = async (event) => {
     event.preventDefault();
     this.props.searchGame(this.state.query)
+    browserHistory.push('/')
   }
 
   _onChangeTerm = e => this.setState({ query: e.target.value })

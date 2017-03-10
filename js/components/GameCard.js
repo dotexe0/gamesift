@@ -24,8 +24,6 @@ export default class GameCard extends React.Component {
               src={img}
               alt="error, no img found" /><br /><br />
         </Link>
-           <a href={youtubeLink}>Trailer</a><br />
-           <iframe width="560" height="315" src={youtubeLink} frameBorder="0" allowFullScreen></iframe>
         </div>
     );
   };
