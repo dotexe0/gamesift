@@ -30,7 +30,7 @@ class SearchBar extends React.Component {
 
   render() {
       return (
-          <div>
+          <div className="form">
             <form onSubmit={this.onSearchAPI}>
               <input type="text"  value={this.state.query} onChange={this._onChangeTerm} />
               <button type="button" onClick={this.onSearchAPI}>

@@ -23,7 +23,7 @@ componentDidMount() {
     const youtubeLink = `https://www.youtube.com/embed/${video}`;
     const summaryText = summary ? summary : 'N/A';
     const rating = aggregated_rating ? Math.round(aggregated_rating / 10) + '/10' : 'Not Rated';
-    
+
     return (
         <div className="gameDetails">
           <button onClick={() => browserHistory.push('/')}>Back</button>
@@ -35,7 +35,7 @@ componentDidMount() {
                 alt="error, no img found" /><br /><br />
               <h5>Summary: {summaryText}</h5>
             <a href={youtubeLink}>Trailer</a><br />
-            <iframe width="560" height="315" src={youtubeLink} frameBorder="0" allowFullScreen></iframe>
+            <iframe width="320" height="315" src={youtubeLink} frameBorder="0" allowFullScreen></iframe>
         </div>
     )
   }

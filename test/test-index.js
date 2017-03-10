@@ -10,7 +10,7 @@ describe('Image component', function() {
     it('Renders hello world in root',  function() {
         const hello = "Hello World";
         const renderer = TestUtils.createRenderer();
-        renderer.render(<App greeting={hello} />);
+        renderer.render(<App title={hello} />);
         const result = renderer.getRenderOutput();
         result.props.className.should.equal('card');
 

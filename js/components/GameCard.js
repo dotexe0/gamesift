@@ -17,7 +17,7 @@ export default class GameCard extends React.Component {
     const {title, img, id, summary} = this.props;
     return (
         <div className="gameCard">
-          {title}<br />
+          <strong>{title}</strong><br />
         <Link to={`/games/${id}`}>
           <img
               onClick={() => hashHistory.push(`/games/${id}`)}

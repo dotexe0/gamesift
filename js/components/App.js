@@ -8,10 +8,11 @@ export default class App extends React.Component {
   }
 
   render() {
+    const title = 'Gamesift';
     return (
       <div>
-        <h1>
-          Gamesift
+        <h1 className="webTitle">
+          <a href="/">{title}</a>
         </h1>
         <SearchBar />
         <div>
