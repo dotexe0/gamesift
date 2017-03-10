@@ -18,8 +18,12 @@ ul, li {
   /* Custom, iPhone Retina */
   @media only screen and (min-width : 320px) {
 
-    body, html, ul {
+    body {
       background-color: red;
+      padding: 0;
+    }
+
+    ul {
       padding: 0;
     }
 
@@ -31,7 +35,17 @@ ul, li {
 
   /* Extra Small Devices, Phones */
   @media only screen and (min-width : 480px) {
+    body, html {
+      background-color: blue;
+      padding: 0;
+    }
 
+    .gameCard, li {
+      margin: 0 auto;
+      display: block;
+    }
+
+  }
   }
 
   /* Small Devices, Tablets */
