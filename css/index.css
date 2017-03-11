@@ -1,7 +1,17 @@
+body {
+  background-color: #222222;
+}
+
 .form, .webTitle {
   text-align: center;
 }
+strong, h1, h5, h5 {
+  font-family: 'Montserrat', sans-serif;
 
+}
+.webTitle {
+  font-family: 'Orbitron', sans-serif;
+}
 .gameCard {
   text-align: center;
   display: inline-block;
