@@ -15,18 +15,43 @@ strong, h1, h5, h5 {
 .gameCard {
   text-align: center;
   display: inline-block;
-  marign-right: 10px;
+  marign-left: -4px;
+  padding: 0;
+  height: 500px;
+
 }
 
 ul, li {
   list-style: none;
   display: inline-block;
+  margin-right: 25px;
 }
 
 /*==========  Mobile First Method  ==========*/
+/* Custom, iPhone 5 Retina */
+@media only screen and (min-width : 320px) {
 
-  /* Custom, iPhone Retina */
-  @media only screen and (min-width : 320px) {
+  body {
+    background-color: purple;
+    padding: 0;
+  }
+
+  ul {
+    padding: 0;
+    margin-left: 25px;
+  }
+
+  .gameCard {
+    text-align: center;
+    display: inline-block;
+    marign-left: -4px;
+    padding: 0;
+  }
+
+}
+
+  /* Custom, iPhone 6 Retina */
+  @media only screen and (min-width : 375px) {
 
     body {
       background-color: red;
@@ -35,6 +60,7 @@ ul, li {
 
     ul {
       padding: 0;
+      margin-left: 25px;
     }
 
     .gameCard, li {
@@ -52,7 +78,7 @@ ul, li {
 
     .gameCard, li {
       margin: 0 auto;
-      display: block;
+
     }
 
   }
@@ -60,18 +86,32 @@ ul, li {
 
   /* Small Devices, Tablets */
   @media only screen and (min-width : 768px) {
-
+    body, html {
+      background-color: green;
+      padding: 0;
+    }
   }
 
   /* Medium Devices, Desktops */
   @media only screen and (min-width : 992px) {
-
+    body, html {
+      background-color: yellow;
+      padding: 0;
+    }
   }
 
   /* Large Devices, Wide Screens */
   @media only screen and (min-width : 1200px) {
-
+    body, html {
+      background-color: orange;
+      padding: 0;
+    }
   }
+
+
+
+
+
 
 
 
