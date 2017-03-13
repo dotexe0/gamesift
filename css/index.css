@@ -4,6 +4,7 @@ body {
 
 .summary {
   padding: 15px;
+  border-radius: 5px;
 }
 
 .form, .webTitle {
@@ -15,10 +16,21 @@ body {
    letter-spacing: 10px;
    text-decoration: none;
 }
-strong, h1, h5, h5 {
+strong, h1, h5, .about, .about-text {
   font-family: 'Montserrat', sans-serif;
-
 }
+
+.about, .about-text {
+  margin-top: 50px;
+  display: inline-block;
+}
+
+.about {
+  padding-left: 100px;
+  color: #ce9697;
+}
+
+
 .webTitle {
   font-family: 'Orbitron', sans-serif;
 }
@@ -62,9 +74,18 @@ img {
   color: #222222;
   font-size: 18px;
   padding: 10px;
-  width: 300px;
   transition: all 0.5s;
   margin: 5px;
+}
+
+.inputBox[type=text] {
+    width: 150px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.inputBox[type=text]:focus {
+    width: 300px;
 }
 
 .button {
@@ -75,39 +96,35 @@ img {
   text-align: center;
   font-size: 18px;
   padding: 10px;
-  width: 100px;
+  width: 150px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
 }
 
-.button span {
+.button {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+.button:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
-  top: 0;
+  top: 5;
   right: -20px;
   transition: 0.5s;
 }
 
-.button:hover span {
+.button:hover {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+.button:hover:after {
   opacity: 1;
-  right: 0;
-}
-
-.detailGameTitle {
-
+  right: 30px;
 }
 
 .image {
@@ -145,6 +162,10 @@ img {
     padding: 0;
   }
 
+  .about, .about-text {
+    display: inline;
+  }
+
 }
 
   /* Custom, iPhone 6 Retina */
@@ -180,6 +201,10 @@ img {
       transition: 0.3s;
       box-sizing: border-box;
     }
+
+    .about, .about-text {
+      display: inline;
+    }
   }
 
   /* Extra Small Devices, Phones */
@@ -210,6 +235,11 @@ img {
       width: 450px;
       height: 315px;
     }
+
+    .about, .about-text {
+      display: inline;
+      margin-top: 50px;
+    }
   }
 
   /* Small Devices, Tablets */
@@ -236,6 +266,11 @@ img {
 
     body, html {
       padding: 0;
+    }
+
+    .about, .about-text {
+      display: inline-block;
+      margin-top: 50px;
     }
   }
 
