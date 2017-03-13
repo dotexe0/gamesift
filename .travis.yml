@@ -13,9 +13,9 @@ deploy:
     tags: true
     all_branches: true
 after_success:
+  git tag -a v0.12
   if ! git rev-parse gh-pages >/dev/null 2>/dev/null
   then
-    git tag -a v0.12
     git checkout --orphan gh-pages
     git rm -rf .
     git commit --allow-empty -m "Initialize empty gh-pages"
