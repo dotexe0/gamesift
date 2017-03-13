@@ -23,19 +23,17 @@ componentDidMount() {
     const youtubeLink = `https://www.youtube.com/embed/${video}`;
     const summaryText = summary ? summary : 'N/A';
     const rating = aggregated_rating ? Math.round(aggregated_rating / 10) + '/10' : 'Not Rated';
-
+    console.log(this.props.game);
     return (
         <div className="gameDetails">
-          <button onClick={() => browserHistory.push('/')}>Back</button>
-          <h1>{name}</h1>
-          <h4>{aggregated_rating}</h4> <br />
-            <Rating /><h5>{rating}</h5> <br />
-            <img
+          <button className="button" onClick={() => browserHistory.push('/')}>Back</button>
+          <h1 className="detailGameTitle">{name}</h1>
+            <Rating /><h5 className="rating"> [{rating}]</h5> <br />
+            <img className="image"
                 src={imageUrl}
                 alt="error, no img found" /><br /><br />
-              <h5>Summary: {summaryText}</h5>
-            <a href={youtubeLink}>Trailer</a><br />
-            <iframe width="320" height="315" src={youtubeLink} frameBorder="0" allowFullScreen></iframe>
+              <h3 className="summary">Synopsis: <h5>{summaryText}</h5></h3>
+            <iframe className="iframe" src={youtubeLink} frameBorder="0" allowFullScreen></iframe>
         </div>
     )
   }
