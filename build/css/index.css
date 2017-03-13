@@ -16,10 +16,21 @@ body {
    letter-spacing: 10px;
    text-decoration: none;
 }
-strong, h1, h5, h5 {
+strong, h1, h5, .about, .about-text {
   font-family: 'Montserrat', sans-serif;
-
 }
+
+.about, .about-text {
+  margin-top: 50px;
+  display: inline-block;
+}
+
+.about {
+  padding-left: 100px;
+  color: #ce9697;
+}
+
+
 .webTitle {
   font-family: 'Orbitron', sans-serif;
 }
@@ -116,10 +127,6 @@ img {
   right: 30px;
 }
 
-.detailGameTitle {
-
-}
-
 .image {
   padding: 0;
   height: 500px;
@@ -153,6 +160,10 @@ img {
     display: inline-block;
     marign-left: -4px;
     padding: 0;
+  }
+
+  .about, .about-text {
+    display: inline;
   }
 
 }
@@ -190,6 +201,10 @@ img {
       transition: 0.3s;
       box-sizing: border-box;
     }
+
+    .about, .about-text {
+      display: inline;
+    }
   }
 
   /* Extra Small Devices, Phones */
@@ -220,6 +235,11 @@ img {
       width: 450px;
       height: 315px;
     }
+
+    .about, .about-text {
+      display: inline;
+      margin-top: 50px;
+    }
   }
 
   /* Small Devices, Tablets */
@@ -246,6 +266,11 @@ img {
 
     body, html {
       padding: 0;
+    }
+
+    .about, .about-text {
+      display: inline-block;
+      margin-top: 50px;
     }
   }
 

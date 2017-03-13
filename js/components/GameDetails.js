@@ -26,7 +26,7 @@ componentDidMount() {
     console.log(this.props.game);
     return (
         <div className="gameDetails">
-          <button className="button" onClick={() => browserHistory.push('/')}>Back</button>
+          <button className="button" onClick={() => browserHistory.push('/')}>Home</button>
           <h1 className="detailGameTitle">{name}</h1>
             <Rating /><h5 className="rating"> [{rating}]</h5> <br />
             <img className="image"
