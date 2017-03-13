@@ -10,7 +10,7 @@ deploy:
 
   on:
     repo: dotexe0/gamesift
-    tags: false
+    tags: true
     all_branches: true
 after_success:
   if ! git rev-parse gh-pages >/dev/null 2>/dev/null
