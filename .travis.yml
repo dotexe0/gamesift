@@ -20,11 +20,13 @@ after_success:
     git commit --allow-empty -m "Initialize empty gh-pages"
     git checkout master
   fi
+  git tag -a v0.12
   rev=`git rev-parse --short HEAD`
   dir=`git config push.gh-pages.subtree || echo build`
   git add -f $dir
   tree=`git write-tree --prefix=$dir/`
   git reset HEAD $dir
+
   commit=`echo Update gh-pages from $dir $rev|git commit-tree $tree -p gh-pages`
   git update-ref refs/heads/gh-pages $commit
   git push origin gh-pages:gh-pages
