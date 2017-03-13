@@ -30,10 +30,10 @@ class SearchBar extends React.Component {
 
   render() {
       return (
-          <div className="form">
-            <form onSubmit={this.onSearchAPI}>
-              <input type="text"  value={this.state.query} onChange={this._onChangeTerm} />
-              <button type="button" onClick={this.onSearchAPI}>
+          <div className="formDiv">
+            <form className="form" onSubmit={this.onSearchAPI}>
+              <input className="inputBox" type="text" placeholder="Enter game title" value={this.state.query} onChange={this._onChangeTerm} />
+              <button className="button" type="button" onClick={this.onSearchAPI}>
                   Search
               </button>
             </form>

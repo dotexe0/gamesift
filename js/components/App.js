@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchBar from './SearchBar';
+import {browserHistory} from 'react-router';
 
 export default class App extends React.Component {
 
@@ -7,6 +8,9 @@ export default class App extends React.Component {
     super(props);
   }
 
+_backspace() {
+
+}
   render() {
     const title = 'Gamesift';
     return (
