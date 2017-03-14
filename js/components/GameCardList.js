@@ -6,7 +6,6 @@ class GameCardList extends React.Component {
 
   render() {
     //props here contains Location, params, route, router, routeParams. Need to pass state.
-    console.log("GameCardList props, ", this.props.games);
     if (this.props.games.length === 0) {
       return (
         <h1 className="search">Search for a game...</h1>

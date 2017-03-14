@@ -3,9 +3,8 @@
 <h2>About</h2>
 A video game synopsis search engine. Hear about a cool new game, but want to get a quick synopsis/summary? This app lets you search for video games and find out what it's all about.
 
-## Live: 
-https://dotexe0.github.io/gamesift/
-
+## Live:
+http://gamesift.surge.sh
 
 
 ## Tools
@@ -46,4 +45,3 @@ OR
 
 npm run dev (for development mode)
 ```
-
