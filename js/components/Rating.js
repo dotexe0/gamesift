@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 function Rating(props) {
-  console.log(props.game.aggregated_rating);
     const stars = [];
     for (let i=0; i < 10; i++) {
         let className;

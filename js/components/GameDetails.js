@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { browserHistory } from 'react-router';
+import { hashHistory } from 'react-router';
 import { showDetail } from '../actions';
 import Rating from './Rating';
 
@@ -12,7 +12,6 @@ componentDidMount() {
 
   render() {
     // console.log("GameDetails props: ", this.props);
-    console.log("State: ", this.state);
     if (!this.props.game) {
       return <h1>Loading...</h1>
     }
@@ -23,16 +22,15 @@ componentDidMount() {
     const youtubeLink = `https://www.youtube.com/embed/${video}`;
     const summaryText = summary ? summary : 'N/A';
     const rating = aggregated_rating ? Math.round(aggregated_rating / 10) + '/10' : 'Not Rated';
-    console.log(this.props.game);
     return (
         <div className="gameDetails">
-          <button className="button" onClick={() => browserHistory.push('/')}>Home</button>
+          <button className="button" onClick={() => hashHistory.push('/')}>Home</button>
           <h1 className="detailGameTitle">{name}</h1>
             <Rating /><h5 className="rating"> [{rating}]</h5> <br />
             <img className="image"
                 src={imageUrl}
                 alt="error, no img found" /><br /><br />
-              <h3 className="summary">Synopsis: <h5>{summaryText}</h5></h3>
+              <h3 className="summary">Synopsis: <span className="summaryText">{summaryText}</span></h3>
             <iframe className="iframe" src={youtubeLink} frameBorder="0" allowFullScreen></iframe>
         </div>
     )

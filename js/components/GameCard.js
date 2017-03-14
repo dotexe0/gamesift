@@ -8,6 +8,13 @@ export default class GameCard extends React.Component {
   constructor(props) {
     super(props);
   }
+  truncateText = text => {
+   console.log(text);
+   if (text.length > 25) {
+     return text.substr(0, 25) + "...";
+   }
+   return text;
+  }
 
   render() {
     //props here is a single game object
@@ -17,7 +24,7 @@ export default class GameCard extends React.Component {
     const {title, img, id, summary} = this.props;
     return (
         <div className="gameCard">
-          <strong>{title}</strong><br />
+          <strong>{this.truncateText(title)}</strong><br />
         <Link to={`/games/${id}`}>
           <img
               onClick={() => hashHistory.push(`/games/${id}`)}
