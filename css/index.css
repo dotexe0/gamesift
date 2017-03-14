@@ -5,6 +5,11 @@ body {
 .summary {
   padding: 15px;
   border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.summaryText {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .form, .webTitle {
@@ -16,7 +21,7 @@ body {
    letter-spacing: 10px;
    text-decoration: none;
 }
-strong, h1, h5, .about, .about-text {
+strong, span, h1, h5, .about, .about-text {
   font-family: 'Montserrat', sans-serif;
 }
 
