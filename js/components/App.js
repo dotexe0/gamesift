@@ -20,7 +20,7 @@ _backspace() {
         </h1>
         <SearchBar />
         <div>
-          <h1 className="about">Gamesift.</h1> <h1 className="about-text">A game synopsis search engine.</h1>
+          <h1 className="about">Gamesift.</h1> <h1 className="about-text">A video game synopsis search engine.</h1>
           {this.props.children}
         </div>
       </div>
