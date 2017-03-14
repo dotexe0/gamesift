@@ -1,23 +1,49 @@
-# Thinkful React Starter
+##Gamesift
+[![Build Status](https://travis-ci.org/dotexe0/gamesift.svg?branch=master)](https://travis-ci.org/dotexe0/gamesift)
+<h2>About</h2>
+A video game synopsis search engine. Hear about a cool new game, but want to get a quick synopsis/summary? This app lets you search for video games and find out what it's all about.
 
-A template for developing React apps.
+## Live: 
+//https://daytradr.herokuapp.com/
 
-## Getting started
 
-### Setting up a project
 
-* Move into your projects directory: `cd ~/YOUR_PROJECTS_DIRECTORY`
-* Clone this repository: `git clone https://github.com/oampo/thinkful-react-starter YOUR_PROJECT_NAME`
-* Move into the project directory: `cd YOUR_PROJECT_NAME`
-* Install the dependencies: `npm install`
-* Create a new repo on GitHub: https://github.com/new
-    * Make sure the "Initialize this repository with a README" option is left **un**checked
-* Update the remote to point to your GitHub repository: `git remote set-url origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME`
+## Tools
+**Front End**
+* HTML5
+* CSS3 w/ Media Queries
+* Javascript (ES6)
 
-### Working on the project
+**Back End**
+* IGDB API
+* Axios (HTTP requests)
 
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Run the development task: `npm run dev`
-    * Starts a server running at http://localhost:8080
-    * Automatically rebuilds when any of your files change
+**Testing**
+* Mocha
+* Chai
+* Chai-HTTP
+
+**Deployment**
+* TravisCI
+* GH-Pages
+
+## Searching...
+![Landing Page](https://i.imgur.com/uss4arx.jpg)
+
+## Video Game Synopsis
+![Landing Page](https://i.imgur.com/Yy93zdh.png)
+
+
+## Installing @ localhost
+
+```sh
+cd PROJECT_DIRECTORY
+npm i -S
+npm run build
+npm run start
+
+OR
+
+npm run dev (for development mode)
+```
 
