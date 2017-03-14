@@ -9,7 +9,7 @@ class GameCardList extends React.Component {
     console.log("GameCardList props, ", this.props.games);
     if (this.props.games.length === 0) {
       return (
-        <h1>Search for a game...</h1>
+        <h1 className="search">Search for a game...</h1>
       );
     }
 
