@@ -8,6 +8,7 @@ export default class GameCard extends React.Component {
   constructor(props) {
     super(props);
   }
+  
   truncateText = text => {
    console.log(text);
    if (text.length > 25) {
