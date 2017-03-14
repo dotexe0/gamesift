@@ -25,12 +25,6 @@ strong, h1, h5, .about, .about-text {
   display: inline-block;
 }
 
-.about {
-  padding-left: 100px;
-  color: #ce9697;
-}
-
-
 .webTitle {
   font-family: 'Orbitron', sans-serif;
 }
@@ -142,6 +136,13 @@ img {
 
 }
 
+  .about {
+    padding-left: 20px;
+    color: #ce9697;
+  }
+  .search {
+    padding-left: 20px;
+  }
 /*==========  Mobile First Method  ==========*/
 /* Custom, iPhone 5 Retina */
 @media only screen and (min-width : 320px) {
@@ -166,6 +167,9 @@ img {
     display: inline;
   }
 
+  .about {
+    color: #ce9697;
+  }
 }
 
   /* Custom, iPhone 6 Retina */
@@ -205,6 +209,14 @@ img {
     .about, .about-text {
       display: inline;
     }
+
+    /*.about {
+      padding-left: 100px;
+      color: #ce9697;
+    }
+    .search {
+      padding-left: 100px;
+    }*/
   }
 
   /* Extra Small Devices, Phones */
@@ -240,6 +252,7 @@ img {
       display: inline;
       margin-top: 50px;
     }
+
   }
 
   /* Small Devices, Tablets */
