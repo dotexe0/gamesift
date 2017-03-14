@@ -4,7 +4,7 @@
 A video game synopsis search engine. Hear about a cool new game, but want to get a quick synopsis/summary? This app lets you search for video games and find out what it's all about.
 
 ## Live: 
-//https://daytradr.herokuapp.com/
+https://dotexe0.github.io/gamesift/
 
 
 
