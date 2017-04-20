@@ -24,7 +24,7 @@ componentDidMount() {
     const rating = aggregated_rating ? Math.round(aggregated_rating / 10) + '/10' : 'Not Rated';
     return (
         <div className="gameDetails">
-          <button className="button" onClick={() => hashHistory.push('/')}>Home</button>
+          <button className="button" id="homeButton" onClick={() => hashHistory.push('/home')}>Home</button>
           <h1 className="detailGameTitle">{name}</h1>
             <Rating /><h5 className="rating"> [{rating}]</h5> <br />
             <img className="image"

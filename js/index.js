@@ -9,13 +9,15 @@ import store from './store';
 import App from './components/App';
 import GameCardList from './components/GameCardList';
 import GameDetails from './components/GameDetails';
+import LandingPage from './components/LandingPage';
 
 const routes = (
   <Provider store={store}>
     <Router history={hashHistory}>
-      <Route path="/" component={App}>
+      <Route path="/" component={LandingPage} />
+      <Route path="/home" component={App}>
         <IndexRoute component={GameCardList} />
-        <Route path="/games/:gameID" component={GameDetails} />
+        <Route path="/home/games/:gameID" component={GameDetails} />
       </Route>
     </Router>
   </Provider>

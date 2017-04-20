@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
   onSearchAPI = async (event) => {
     event.preventDefault();
     this.props.searchGame(this.state.query)
-    hashHistory.push('/')
+    hashHistory.push('/games')
   }
 
   _onChangeTerm = e => this.setState({ query: e.target.value })
