@@ -103,7 +103,8 @@ img {
 }
 
 #homeButton {
-  float: left;
+  display: block;
+  margin-left: 55px;
 }
 
 .button {
