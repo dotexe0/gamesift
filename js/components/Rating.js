@@ -12,9 +12,7 @@ function Rating(props) {
             className = 'fa fa-star-o';
         }
         const star = (
-            <i className={className} key={i}
-               onClick={() => console.log("star is born?")}>
-            </i>
+            <i className={className} key={i} />
         );
         stars.push(star);
     }

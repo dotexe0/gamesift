@@ -6,11 +6,11 @@ class GameCardList extends React.Component {
 
   render() {
     //props here contains Location, params, route, router, routeParams. Need to pass state.
-    if (this.props.games.length === 0) {
-      return (
-        <h1 className="search">Search for a game...</h1>
-      );
-    }
+    // if (this.props.games.length === 0) {
+    //   return (
+    //     <h1 className="search">Search for a game...</h1>
+    //   );
+    // }
 
     const games = this.props.games.map((game, index) => {
       // console.log("img: ", game.cover.cloudinary_id);

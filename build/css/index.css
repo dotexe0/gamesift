@@ -1,3 +1,53 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 body {
   background-color: #F5F3EE;
   text-align: center;
@@ -15,11 +65,13 @@ body {
 
 .form, .webTitle {
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
  a, a:hover, a:visited, a:active {
    color: #222222;
-   /*letter-spacing: 10px;*/
+   letter-spacing: 10px;
    text-decoration: none;
 }
 strong, span, h1, h5, .about, .about-text {
@@ -33,14 +85,13 @@ strong, span, h1, h5, .about, .about-text {
 
 .webTitle {
   font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
 }
 
 .gameCard {
   text-align: center;
   display: inline-block;
-  marign-left: -4px;
   padding: 0;
-  height: 500px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   margin-right: 20px;
@@ -50,7 +101,14 @@ strong, span, h1, h5, .about, .about-text {
 
 .gameCard:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+  /*max-width: 320px;*/
+  /*max-height: 450px;*/
 }
+
+/*li {
+  margin-right: 15px;
+  margin-left: 15px;
+}*/
 
 ul, li {
   list-style: none;
@@ -60,10 +118,12 @@ ul, li {
 
 img {
   width: 320px;
-  height: 450px;
+  height: 320px;
   border: none;
   border-radius: 5px;
+  margin-top: 40px; 
 }
+
 
 .rating {
   display: inline-block;
@@ -103,8 +163,10 @@ img {
 }
 
 #homeButton {
-  display: block;
-  margin-left: 55px;
+    display: block;
+    margin-left: 55px;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .button {
@@ -137,7 +199,8 @@ img {
   height: 500px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-  margin-right: 20px;
+  margin-top: 35px;
+  /*margin-right: 20px;*/
   border: none;
   border-radius: 5px;
 }
@@ -165,6 +228,10 @@ img {
   ul {
     padding: 0;
     margin-left: 25px;
+  }
+
+  img {
+    margin-bottom: 15px;
   }
 
   .gameCard {
@@ -215,19 +282,16 @@ img {
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
       box-sizing: border-box;
+      margin-bottom: 35px;
     }
 
     .about, .about-text {
       display: inline;
     }
 
-    /*.about {
-      padding-left: 100px;
-      color: #ce9697;
+    img {
+      margin-bottom: 15px;
     }
-    .search {
-      padding-left: 100px;
-    }*/
   }
 
   /* Extra Small Devices, Phones */
@@ -247,6 +311,10 @@ img {
       margin: 0;
     }
 
+    img {
+      margin-bottom: 15px;
+    }
+
     .gameCard {
       margin-left: -4px;
       margin-bottom: 15px;
@@ -261,7 +329,7 @@ img {
 
     .about, .about-text {
       display: inline;
-      margin-top: 50px;
+      /*margin-top: 50px;*/
     }
 
   }
@@ -270,22 +338,25 @@ img {
   @media only screen and (min-width : 768px) {
 
     .iframe {
-      width: 350px;
-      height: 315px;
-      margin-left: 350px;
+      width: 390px;
+      height: 230px;
+      margin-left: 360px;
       display: block;
     }
 
     .summary {
       margin-left: 350px;
       max-width: 725px;
-      margin-top: -35px;
+      width: 450px;
+      /*margin-top: -35px;*/
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
       box-sizing: border-box;
     }
     .image {
       float: left;
+      margin-left: 10px;
+      background: none;
     }
 
     body, html {
@@ -296,14 +367,20 @@ img {
       display: inline-block;
       margin-top: 50px;
     }
+
+    #homeButton {
+      display: block;
+      margin-left: 55px;
+    }
+
   }
 
   /* Medium Devices, Desktops */
   @media only screen and (min-width : 992px) {
 
     .iframe {
-      width: 560px;
-      height: 315px;
+      width: 650px;
+      height: 325px;
       margin-left: 350px;
       display: block;
     }
@@ -311,10 +388,11 @@ img {
     .summary {
       margin-left: 350px;
       max-width: 725px;
-      margin-top: -35px;
+      /*margin-top: -35px;*/
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
       box-sizing: border-box;
+      width: 650px;
 
     }
     .image {
@@ -323,6 +401,11 @@ img {
 
     body, html {
       padding: 0;
+    }
+
+    #homeButton {
+      display: block;
+      margin-left: 55px;
     }
   }
 
@@ -330,16 +413,18 @@ img {
   @media only screen and (min-width : 1200px) {
 
     .iframe {
-      width: 560px;
-      height: 315px;
+      width: 725px;
+      height: 345px;
       margin-left: 350px;
       display: block;
     }
 
     .summary {
-      margin-left: 350px;
-      max-width: 725px;
-      margin-top: -35px;
+      /*margin-left: 350px;*/
+      /*max-width: 725px;*/
+      width: 725px;
+      margin-top: 0px;
+      margin-bottom: 30px;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
       box-sizing: border-box;
@@ -352,4 +437,12 @@ img {
     body, html {
       padding: 0;
     }
+
+    #homeButton {
+    display: block;
+    margin-left: 55px;
   }
+
+h1 {
+  margin: 5px;
+}

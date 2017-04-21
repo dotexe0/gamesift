@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
-import {hashHistory} from 'react-router';
+import {browserHistory} from 'react-router';
 
 import { showDetail } from '../actions';
 
@@ -28,7 +28,7 @@ export default class GameCard extends React.Component {
           <strong>{this.truncateText(title)}</strong><br />
         <Link to={`/home/games/${id}`}>
           <img
-              onClick={() => hashHistory.push(`/games/${id}`)}
+              onClick={() => browserHistory.push(`/games/${id}`)}
               src={img}
               alt="error, no img found" /><br /><br />
         </Link>

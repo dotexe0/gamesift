@@ -19,7 +19,7 @@ if (isDev) {
   ]
   enhancers = compose(
     applyMiddleware(...middlewares, ...devMiddleware),
-    window.devToolsExtension ? window.devToolsExtension() : f => f
+      window.devToolsExtension ? window.devToolsExtension() : f => f
   )
 } else {
   enhancers = compose(applyMiddleware(...middlewares))

@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from './SearchBar';
-import {hashHistory} from 'react-router';
+import { browserHistory } from 'react-router';
 
 export default class App extends React.Component {
 

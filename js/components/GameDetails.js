@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { hashHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 import { showDetail } from '../actions';
 import Rating from './Rating';
 
@@ -24,7 +24,7 @@ componentDidMount() {
     const rating = aggregated_rating ? Math.round(aggregated_rating / 10) + '/10' : 'Not Rated';
     return (
         <div className="gameDetails">
-          <button className="button" id="homeButton" onClick={() => hashHistory.push('/home')}>Home</button>
+          <button className="button" id="homeButton" onClick={() => browserHistory.push('/home')}>Home</button>
           <h1 className="detailGameTitle">{name}</h1>
             <Rating /><h5 className="rating"> [{rating}]</h5> <br />
             <img className="image"

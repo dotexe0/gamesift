@@ -2,7 +2,7 @@ require('babel-polyfill');
 
 import React from 'react';
 import ReactDOM  from 'react-dom';
-import {Router, Route, IndexRoute, hashHistory} from 'react-router';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import {Provider} from 'react-redux';
 import store from './store';
 
@@ -13,7 +13,7 @@ import LandingPage from './components/LandingPage';
 
 const routes = (
   <Provider store={store}>
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
       <Route path="/" component={LandingPage} />
       <Route path="/home" component={App}>
         <IndexRoute component={GameCardList} />
