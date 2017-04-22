@@ -73,6 +73,11 @@ body {
    color: #222222;
    letter-spacing: 10px;
    text-decoration: none;
+   z-index: 100;
+}
+
+a.landingButton:hover {
+  background: #FF7E82 !important;
 }
 strong, span, h1, h5, .about, .about-text {
   font-family: 'Montserrat', sans-serif;
@@ -100,6 +105,8 @@ strong, span, h1, h5, .about, .about-text {
 }
 
 .gameCard:hover {
+  /*background-color: #C9BF84;*/
+  background-color: #FF7E82;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
   /*max-width: 320px;*/
   /*max-height: 450px;*/

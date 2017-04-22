@@ -5,23 +5,28 @@ export default class LandingPage extends Component  {
 
     render() {
         const landingTitle = {
-            color: '#ce9697',
-            fontFamily: 'Orbitron sansSerif',
+            color: 'black',
+            fontFamily: 'Orbitron, sans-serif',
+            // fontFamily: 'montserrat',
             letterSpacing: '10px',
             zIndex: 1,
             fontSize: '50px',
-            background: '#f9f9f9'
+            backgroundColor: '#f9f9f9',
+            borderRadius: '5px',
+            paddingTop: '11px',
+            paddingLeft: '5px',
+            paddingRight: '5px'
         }
 
         const styledDiv = {
-            position: 'relative',
+            // position: 'relative',
             display: 'flex',
             alignItems: 'center',
             flex: 1,
             justifyContent: 'center',
             height: '100vh',
             width: '100%',
-            background: 'url(../../assets/bgImg.jpg) no-repeat center center fixed',
+            background: 'url(../../assets/bgImg2.jpg) no-repeat center center fixed',
             backgroundSize: 'cover',
             flexDirection: 'column'
         }
@@ -32,36 +37,41 @@ export default class LandingPage extends Component  {
             left: 0,
             right: 0,
             bottom: 0,
-            opacity: 0.9
+            backgroundColor: 'rgba(192,192,192,0.6)'
         };
 
-        const h1Styling = {
+        const pStyling = {
             marginTop: '30px',
             marginBottom: '30px',   
             zIndex: 1,
-            background: '#f9f9f9'
+            background: '#f9f9f9',
+            borderRadius: '5px',
+            padding: '15px',
+            fontFamily: 'Montserrat, sans-serif'
         }
 
         const landingButton = {
             background: '#f9f9f9',
             fontSize: '16px',
+            fontFamily: 'Montserrat, sans-serif',
             marginTop: '10px',
             borderStyle: 'none',
-            borderStyle: 'none',
-            padding: '5px 20px',
+            borderRadius: '5px',
+            padding: '10px 20px',
             cursor: 'pointer',
-            zIndex: 1
+            zIndex: 1,
+            letterSpacing: '1px'
         }
         
         return(
                 <div className="landing" style={styledDiv}>
                     <div style={container}/>
-                    <Link to="/home" style={landingTitle}><h1>Gamesift</h1></Link>
-                    <p style={h1Styling}>
+                    <Link to="/home"><h1 style={landingTitle}>Gamesift</h1></Link>
+                    <p style={pStyling}>
                         A video game synopsis search engine. <br />
                         Find out what games you've been missing out on.
                     </p>
-                    <Link to="/home" className="landingButton" style={landingButton}>Enter</Link>
+                    <Link to="/home" className="landingButton" style={landingButton}>Get started</Link>
                 </div>
             );
     }
