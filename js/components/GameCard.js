@@ -19,8 +19,6 @@ export default class GameCard extends React.Component {
 
   render() {
     //props here is a single game object
-    // console.log("GameCard props: ", this.props);
-    // console.log("State: ", this.state);
     const youtubeLink = `https://www.youtube.com/embed/${this.props.videoId}`;
     const {title, img, id, summary} = this.props;
     return (

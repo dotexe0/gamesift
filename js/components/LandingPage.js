@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { Link, browserHistory } from 'react-router';
-// import backgroundImage from '../../assets/bgImg.jpg';
 export default class LandingPage extends Component  {
 
     render() {
         const landingTitle = {
             color: 'black',
             fontFamily: 'Orbitron, sans-serif',
-            // fontFamily: 'montserrat',
             letterSpacing: '10px',
             zIndex: 1,
             fontSize: '50px',
@@ -19,7 +17,6 @@ export default class LandingPage extends Component  {
         }
 
         const styledDiv = {
-            // position: 'relative',
             display: 'flex',
             alignItems: 'center',
             flex: 1,
