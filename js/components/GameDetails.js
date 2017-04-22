@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
-import { showDetail } from '../actions';
+import { showDetail, searchGame } from '../actions';
 import Rating from './Rating';
 
 class GameDetails extends React.Component {
@@ -30,7 +30,12 @@ componentDidMount() {
             <img className="image"
                 src={imageUrl}
                 alt="error, no img found" /><br /><br />
-              <h3 className="summary">Synopsis: <span className="summaryText">{summaryText}</span></h3>
+              <div className="summaryText">
+                <h3 className="summary">
+                <strong style={{float:'left'}}>Synopsis:</strong><br />
+                  {summaryText}
+                </h3>
+              </div>
             <iframe className="iframe" src={youtubeLink} frameBorder="0" allowFullScreen></iframe>
         </div>
     )
@@ -41,4 +46,4 @@ const mapStateToProps = state => ({
   game: state.game
 })
 
-export default connect(mapStateToProps, { showDetail })(GameDetails);
+export default connect(mapStateToProps, { showDetail, searchGame })(GameDetails);
