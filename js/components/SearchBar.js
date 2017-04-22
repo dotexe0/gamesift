@@ -8,7 +8,6 @@ class SearchBar extends React.Component {
     query: ''
   }
 
-  // not working right now
   Loading = () => { return <h5>Loading...</h5> }
   NotLoading = () => { return; }
   isLoading = () => {

@@ -11,7 +11,6 @@ componentDidMount() {
 }
 
   render() {
-    // console.log("GameDetails props: ", this.props);
     if (!this.props.game) {
       return <h1>Loading...</h1>
     }
