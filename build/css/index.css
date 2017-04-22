@@ -160,6 +160,7 @@ img {
 .inputBox[type=text]:focus {
     width: 300px;
     outline: 2px solid;
+    border-radius: 0px;
 }
 
 .button {
