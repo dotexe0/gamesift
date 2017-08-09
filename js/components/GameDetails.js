@@ -16,7 +16,7 @@ componentDidMount() {
     }
 
     const { name, cover, id, img, summary, videos, esrb, aggregated_rating } = this.props.game;
-    const imageUrl = cover ? `http://images.igdb.com/igdb/image/upload/w_320/${cover.cloudinary_id}.png` : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
+    const imageUrl = cover ? `http://images.igdb.com/igdb/image/upload/t_logo_med_2x/${cover.cloudinary_id}.png` : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
     const video = videos ? videos[0].video_id : 'dQw4w9WgXcQ';
     const youtubeLink = `https://www.youtube.com/embed/${video}`;
     const summaryText = summary ? summary : 'N/A';

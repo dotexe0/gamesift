@@ -7,7 +7,7 @@ class GameCardList extends React.Component {
   render() {
 
     const games = this.props.games.map((game, index) => {
-      const imageUrl = game.cover ? `http://images.igdb.com/igdb/image/upload/w_320/${game.cover.cloudinary_id}.png` : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
+      const imageUrl = game.cover ? `https://images.igdb.com/igdb/image/upload/t_logo_med_2x/${game.cover.cloudinary_id}.png` : 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
       const video = game.videos ? game.videos[0].video_id : 'dQw4w9WgXcQ';
 
       return (

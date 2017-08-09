@@ -5,7 +5,7 @@
   "main": "js/index.js",
   "scripts": {
     "start": "http-server -c-1 build",
-    "dev": "NODE_ENV=development run-p watch serve",
+    "dev": "SET NODE_ENV=development run-p watch serve",
     "test": "NODE_ENV=test mocha --recursive --compilers js:babel-core/register",
     "build": "run-s build:*",
     "clean": "rimraf build",
