@@ -10,7 +10,6 @@ export default class GameCard extends React.Component {
   }
   
   truncateText = text => {
-  //  console.log(text);
    if (text.length > 25) {
      return text.substr(0, 25) + "...";
    }
