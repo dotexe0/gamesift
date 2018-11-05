@@ -65,7 +65,9 @@
     "sinon": "^1.17.6",
     "sinon-chai": "^2.8.0",
     "style-loader": "^0.16.1",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "growl": ">=1.10.0",
+    "ecstatic": ">=2.0.0"
   },
   "dependencies": {
     "axios": "^0.15.3",
